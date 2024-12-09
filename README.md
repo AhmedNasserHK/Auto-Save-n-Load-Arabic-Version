@@ -26,7 +26,7 @@ Before you begin, ensure that a shared folder is available on your network to st
 Make sure that all users who need access to the application have the necessary permissions to read from and write to this shared folder.
 
 #### 2. Download the Application
-- Go to the [latest release](https://github.com/raizar24/Auto-Save-n-Load-Arabic-Version-/releases).
+- Go to the [latest release](https://github.com/AhmedNasserHK/Auto-Save-n-Load-Arabic-Version-/releases).
 - Download the zip file.
 
 #### 3. Install the Application
