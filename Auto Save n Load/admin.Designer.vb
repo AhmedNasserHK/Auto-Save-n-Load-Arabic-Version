@@ -33,7 +33,7 @@ Partial Class admin
         Button1.Name = "Button1"
         Button1.Size = New Size(112, 23)
         Button1.TabIndex = 15
-        Button1.Text = "Login"
+        Button1.Text = "تسجيل دخول"
         Button1.UseVisualStyleBackColor = True
         ' 
         ' Label2
@@ -41,9 +41,9 @@ Partial Class admin
         Label2.AutoSize = True
         Label2.Location = New Point(12, 33)
         Label2.Name = "Label2"
-        Label2.Size = New Size(57, 15)
+        Label2.Size = New Size(54, 15)
         Label2.TabIndex = 18
-        Label2.Text = "Password"
+        Label2.Text = "كلمةا لسر"
         ' 
         ' TextBox2
         ' 
@@ -64,7 +64,7 @@ Partial Class admin
         FormBorderStyle = FormBorderStyle.FixedToolWindow
         Name = "admin"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "ADMIN"
+        Text = "الادمن"
         ResumeLayout(False)
         PerformLayout()
     End Sub

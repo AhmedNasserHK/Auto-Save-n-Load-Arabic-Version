@@ -85,7 +85,7 @@ Partial Class settings
         TabPage1.Padding = New Padding(3)
         TabPage1.Size = New Size(645, 393)
         TabPage1.TabIndex = 0
-        TabPage1.Text = "Game management"
+        TabPage1.Text = "إدارة الالعاب"
         TabPage1.UseVisualStyleBackColor = True
         ' 
         ' Button2
@@ -94,7 +94,7 @@ Partial Class settings
         Button2.Name = "Button2"
         Button2.Size = New Size(119, 41)
         Button2.TabIndex = 29
-        Button2.Text = "Update Game List from Github"
+        Button2.Text = "تحديث قائمة الألعاب من Github"
         Button2.UseVisualStyleBackColor = True
         ' 
         ' btnCancel
@@ -105,7 +105,7 @@ Partial Class settings
         btnCancel.Name = "btnCancel"
         btnCancel.Size = New Size(114, 79)
         btnCancel.TabIndex = 28
-        btnCancel.Text = "Cancel"
+        btnCancel.Text = "إلغاء"
         btnCancel.TextImageRelation = TextImageRelation.ImageAboveText
         btnCancel.UseVisualStyleBackColor = True
         ' 
@@ -117,7 +117,7 @@ Partial Class settings
         btnSave.Name = "btnSave"
         btnSave.Size = New Size(114, 79)
         btnSave.TabIndex = 27
-        btnSave.Text = "Save"
+        btnSave.Text = "حفظ"
         btnSave.TextImageRelation = TextImageRelation.ImageAboveText
         btnSave.UseVisualStyleBackColor = True
         ' 
@@ -137,18 +137,18 @@ Partial Class settings
         Label2.AutoSize = True
         Label2.Location = New Point(230, 74)
         Label2.Name = "Label2"
-        Label2.Size = New Size(61, 15)
+        Label2.Size = New Size(68, 15)
         Label2.TabIndex = 25
-        Label2.Text = "Save Path:"
+        Label2.Text = "مسار الحفظ:"
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Location = New Point(230, 42)
         Label1.Name = "Label1"
-        Label1.Size = New Size(41, 15)
+        Label1.Size = New Size(38, 15)
         Label1.TabIndex = 24
-        Label1.Text = "Game:"
+        Label1.Text = "اللعبة:"
         ' 
         ' txtSavepath
         ' 
@@ -166,7 +166,7 @@ Partial Class settings
         btnDelete.Name = "btnDelete"
         btnDelete.Size = New Size(114, 74)
         btnDelete.TabIndex = 22
-        btnDelete.Text = "Delete"
+        btnDelete.Text = "حذف"
         btnDelete.TextImageRelation = TextImageRelation.ImageAboveText
         btnDelete.UseVisualStyleBackColor = True
         ' 
@@ -177,7 +177,7 @@ Partial Class settings
         btnEdit.Name = "btnEdit"
         btnEdit.Size = New Size(114, 74)
         btnEdit.TabIndex = 21
-        btnEdit.Text = "Edit"
+        btnEdit.Text = "تعديل"
         btnEdit.TextImageRelation = TextImageRelation.ImageAboveText
         btnEdit.UseVisualStyleBackColor = True
         ' 
@@ -188,7 +188,7 @@ Partial Class settings
         btnAdd.Name = "btnAdd"
         btnAdd.Size = New Size(114, 74)
         btnAdd.TabIndex = 20
-        btnAdd.Text = "Add"
+        btnAdd.Text = "اضافة"
         btnAdd.TextImageRelation = TextImageRelation.ImageAboveText
         btnAdd.UseVisualStyleBackColor = True
         ' 
@@ -217,7 +217,7 @@ Partial Class settings
         TabPage2.Padding = New Padding(3)
         TabPage2.Size = New Size(645, 393)
         TabPage2.TabIndex = 1
-        TabPage2.Text = "User Management"
+        TabPage2.Text = "إدارة المستخدمين"
         TabPage2.UseVisualStyleBackColor = True
         ' 
         ' btncancel2
@@ -228,7 +228,7 @@ Partial Class settings
         btncancel2.Name = "btncancel2"
         btncancel2.Size = New Size(114, 76)
         btncancel2.TabIndex = 36
-        btncancel2.Text = "Cancel"
+        btncancel2.Text = "إلغاء"
         btncancel2.TextImageRelation = TextImageRelation.ImageAboveText
         btncancel2.UseVisualStyleBackColor = True
         ' 
@@ -240,7 +240,7 @@ Partial Class settings
         btnsave2.Name = "btnsave2"
         btnsave2.Size = New Size(114, 76)
         btnsave2.TabIndex = 35
-        btnsave2.Text = "Save"
+        btnsave2.Text = "حفظ"
         btnsave2.TextImageRelation = TextImageRelation.ImageAboveText
         btnsave2.UseVisualStyleBackColor = True
         ' 
@@ -259,18 +259,18 @@ Partial Class settings
         Label3.AutoSize = True
         Label3.Location = New Point(246, 115)
         Label3.Name = "Label3"
-        Label3.Size = New Size(60, 15)
+        Label3.Size = New Size(57, 15)
         Label3.TabIndex = 33
-        Label3.Text = "Password:"
+        Label3.Text = "كلمة السر:"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
         Label4.Location = New Point(246, 74)
         Label4.Name = "Label4"
-        Label4.Size = New Size(33, 15)
+        Label4.Size = New Size(58, 15)
         Label4.TabIndex = 32
-        Label4.Text = "User:"
+        Label4.Text = "المستخدم:"
         ' 
         ' txtPass
         ' 
@@ -287,7 +287,7 @@ Partial Class settings
         btndelete2.Name = "btndelete2"
         btndelete2.Size = New Size(114, 80)
         btndelete2.TabIndex = 30
-        btndelete2.Text = "Delete"
+        btndelete2.Text = "حذف"
         btndelete2.TextImageRelation = TextImageRelation.ImageAboveText
         btndelete2.UseVisualStyleBackColor = True
         ' 
@@ -298,7 +298,7 @@ Partial Class settings
         btnedit2.Name = "btnedit2"
         btnedit2.Size = New Size(114, 80)
         btnedit2.TabIndex = 29
-        btnedit2.Text = "Edit"
+        btnedit2.Text = "تعديل"
         btnedit2.TextImageRelation = TextImageRelation.ImageAboveText
         btnedit2.UseVisualStyleBackColor = True
         ' 
@@ -309,7 +309,7 @@ Partial Class settings
         btnadd2.Name = "btnadd2"
         btnadd2.Size = New Size(114, 80)
         btnadd2.TabIndex = 28
-        btnadd2.Text = "Add"
+        btnadd2.Text = "اضافة"
         btnadd2.TextImageRelation = TextImageRelation.ImageAboveText
         btnadd2.UseVisualStyleBackColor = True
         ' 
@@ -331,7 +331,7 @@ Partial Class settings
         TabPage3.Padding = New Padding(3)
         TabPage3.Size = New Size(645, 393)
         TabPage3.TabIndex = 2
-        TabPage3.Text = "Admin management"
+        TabPage3.Text = "إدارة المشرف"
         TabPage3.UseVisualStyleBackColor = True
         ' 
         ' Button1
@@ -340,7 +340,7 @@ Partial Class settings
         Button1.Name = "Button1"
         Button1.Size = New Size(79, 23)
         Button1.TabIndex = 28
-        Button1.Text = "Save"
+        Button1.Text = "حفظ"
         Button1.TextImageRelation = TextImageRelation.ImageAboveText
         Button1.UseVisualStyleBackColor = True
         ' 
@@ -349,9 +349,9 @@ Partial Class settings
         Label5.AutoSize = True
         Label5.Location = New Point(97, 146)
         Label5.Name = "Label5"
-        Label5.Size = New Size(87, 15)
+        Label5.Size = New Size(90, 15)
         Label5.TabIndex = 27
-        Label5.Text = "New Password:"
+        Label5.Text = "كلمة مرور جديدة:"
         ' 
         ' NewAdminPassword
         ' 

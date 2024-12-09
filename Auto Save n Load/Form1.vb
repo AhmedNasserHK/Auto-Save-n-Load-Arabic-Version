@@ -35,7 +35,7 @@ Public Class Form1
                     SetForegroundWindow(process.MainWindowHandle)
                 End If
 
-                MessageBox.Show("Program already running.", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("البرنامج قيد التشغيل بالفعل.", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Me.Close() ' Close this instance if another is already running
                 Return ' Exit this instance
             End If
@@ -69,7 +69,7 @@ Public Class Form1
             End If
             checkCurrentUser()
         Catch ex As Exception
-            ShowError("Please run this program as administrator", ex)
+            ShowError("يرجى تشغيل هذا البرنامج كمسؤول", ex)
         End Try
     End Sub
 
@@ -91,16 +91,16 @@ Public Class Form1
             UpdateSymbolicLinks()
             CreateSession()
             checkCurrentUser()
-            MessageBox.Show("Login Successful", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("تم تسجيل الدخول بنجاح", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Information)
             txtPassword.Text = String.Empty
             txtUserName.Text = String.Empty
         Else
-            MessageBox.Show("Username or Password is incorrect", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("اسم المستخدم أو كلمة المرور غير صحيحة", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnlogout.Click
-        Dim result = MessageBox.Show("Do you want to logout?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+        Dim result = MessageBox.Show("هل تريد تسجيل الخروج؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
         If result = DialogResult.Yes Then
             ResetToDefaultUser()
             DeleteSession()
@@ -129,7 +129,7 @@ Public Class Form1
 
     Private Function CheckServerAvailability() As Boolean
         If Not Directory.Exists(serverLocation) Then
-            MessageBox.Show("Shared folder cannot be accessed. Folder access denied: " & serverLocation, "System Information", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("لا يمكن الوصول إلى المجلد المشترك. تم رفض الوصول إلى المجلد: " & serverLocation, "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return False
         End If
         Return True
@@ -180,14 +180,14 @@ Public Class Form1
     End Sub
 
     Private Sub ShowError(message As String, ex As Exception)
-        MessageBox.Show($"{message}: {ex.Message}", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        MessageBox.Show($"{message}: {ex.Message}", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
 
     Sub checkCurrentUser()
         If username.Equals(Environment.MachineName) Then
-            lblUser.Text = "PUBLIC SAVE"
+            lblUser.Text = "الحفظ العام"
         Else
-            lblUser.Text = "CURRENT USER"
+            lblUser.Text = "المستخدم الحالي"
         End If
     End Sub
 

@@ -87,12 +87,12 @@ Public Class settings
         doc.Load(xml)
         Dim existing As XmlElement
         If name.Contains("'") Then
-            MessageBox.Show("Game Name must not contain single quotation mark", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("يجب ألا يتضمن اسم اللعبة علامة اقتباس مفردة", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return False
         End If
         existing = doc.SelectSingleNode("//" & parent & "/" & child & "[text() = '" & name & "']")
         If existing IsNot Nothing Then
-            MessageBox.Show("Item '" & name & "' already exists.", "System Information")
+            MessageBox.Show("عنصر '" & name & "' موجود بالفعل.", "معلومات النظام")
             Return False
         End If
 
@@ -144,19 +144,19 @@ Public Class settings
 
         If SaveMode = "add" Then
             If name = "" Or path = "" Then
-                MessageBox.Show("All fields are required", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("جميع الحقول مطلوبة", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Exit Sub
             End If
         End If
 
         If SaveMode = "edit" Or SaveMode = "delete" Then
             If name = "" Then
-                MessageBox.Show("Please select a game to " & SaveMode, "System Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("يرجى اختيار لعبة لـ " & SaveMode, "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Exit Sub
             End If
         End If
 
-        result = MessageBox.Show("Do you want to " & txtgame.Text.Trim & " to be " & SaveMode & "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+        result = MessageBox.Show("هل تريد أن " & txtgame.Text.Trim & " يكون " & SaveMode & "?", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
 
         If SaveMode = "add" Then
             If result = DialogResult.Yes Then
@@ -164,27 +164,27 @@ Public Class settings
                 If Not success Then
                     Exit Sub
                 End If
-                MessageBox.Show("Save Complete", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("اكتمل الحفظ", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
-                MessageBox.Show("Save Cancelled", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("تم إلغاء الحفظ", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         End If
 
         If SaveMode = "edit" Then
             If result = DialogResult.Yes Then
                 edit(name, path, Form1.gamesXML, "game", "name", "path", False)
-                MessageBox.Show("Save Complete", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("اكتمل الحفظ", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
-                MessageBox.Show("Save Cancelled", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("تم إلغاء الحفظ", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         End If
 
         If SaveMode = "delete" Then
             If result = DialogResult.Yes Then
                 delete(name, path, Form1.gamesXML, "game", "name")
-                MessageBox.Show("Deletion Complete", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("اكتمل الحذف", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
-                MessageBox.Show("Deltion Cancelled", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("تم إلغاء الحذف", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         End If
         reset()
@@ -224,19 +224,19 @@ Public Class settings
 
         If SaveMode2 = "add" Then
             If name = "" Or path = "" Then
-                MessageBox.Show("All fields are required", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("جميع الحقول مطلوبة", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Exit Sub
             End If
         End If
 
         If SaveMode2 = "edit" Or SaveMode2 = "delete" Then
             If name = "" Then
-                MessageBox.Show("Please select a game to " & SaveMode2, "System Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("يرجى اختيار لعبة لـ " & SaveMode2, "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Exit Sub
             End If
         End If
 
-        result = MessageBox.Show("Do you want to " & name & " to be " & SaveMode2 & "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+        result = MessageBox.Show("هل تريد أن " & name & " يكون " & SaveMode2 & "?", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
 
         If SaveMode2 = "add" Then
             If result = DialogResult.Yes Then
@@ -244,27 +244,27 @@ Public Class settings
                 If Not success Then
                     Exit Sub
                 End If
-                MessageBox.Show("Save Complete", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("اكتمل الحفظ", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
-                MessageBox.Show("Save Cancelled", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("تم إلغاء الحفظ", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         End If
 
         If SaveMode2 = "edit" Then
             If result = DialogResult.Yes Then
                 edit(name, path, Form1.userXML, "user", "username", "passwordHash", True)
-                MessageBox.Show("Save Complete", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("اكتمل الحفظ", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
-                MessageBox.Show("Save Cancelled", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("تم إلغاء الحفظ", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         End If
 
         If SaveMode2 = "delete" Then
             If result = DialogResult.Yes Then
                 delete(name, path, Form1.userXML, "user", "username")
-                MessageBox.Show("Deletion Complete", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("اكتمل الحذف", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
-                MessageBox.Show("Deltion Cancelled", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("تم إلغاء الحذف", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         End If
         reset2()
@@ -275,7 +275,7 @@ Public Class settings
         Dim password = Encrypt(NewAdminPassword.Text.Trim())
         doc.<passwordHash>.Value = password
         doc.Save(Form1.adminXML)
-        MessageBox.Show("Admin Password Change Successful", "System Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        MessageBox.Show("تم تغيير كلمة مرور المسؤول بنجاح", "معلومات النظام", MessageBoxButtons.OK, MessageBoxIcon.Information)
         NewAdminPassword.Clear()
         Me.Close()
     End Sub
@@ -346,12 +346,12 @@ Public Class settings
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim result = MessageBox.Show("Do you want to update?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+        Dim result = MessageBox.Show("هل تريد التحديث؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
         If result = DialogResult.Yes Then
             updateXML()
             ListBox1.Items.Clear()
             ListBox1.Items.AddRange(loadList(Form1.gamesXML, "game", "name").ToArray())
-            MessageBox.Show("Game List updated", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("تم تحديث قائمة الألعاب", "تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 End Class

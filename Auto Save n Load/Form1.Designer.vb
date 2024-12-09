@@ -84,7 +84,7 @@ Partial Class Form1
         btnLogin.Name = "btnLogin"
         btnLogin.Size = New Size(266, 47)
         btnLogin.TabIndex = 3
-        btnLogin.Text = "LOG IN"
+        btnLogin.Text = "تسجيل دخول"
         btnLogin.UseVisualStyleBackColor = False
         ' 
         ' btnRegister
@@ -98,17 +98,17 @@ Partial Class Form1
         btnRegister.Name = "btnRegister"
         btnRegister.Size = New Size(156, 30)
         btnRegister.TabIndex = 4
-        btnRegister.Text = "Create a new account"
+        btnRegister.Text = "أنشاء حساب جديد"
         btnRegister.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(12, 182)
+        Label1.Location = New Point(7, 182)
         Label1.Name = "Label1"
-        Label1.Size = New Size(68, 15)
+        Label1.Size = New Size(81, 15)
         Label1.TabIndex = 5
-        Label1.Text = "User Name:"
+        Label1.Text = "اسم المستخدم:"
         ' 
         ' Label2
         ' 
@@ -117,7 +117,7 @@ Partial Class Form1
         Label2.Name = "Label2"
         Label2.Size = New Size(57, 15)
         Label2.TabIndex = 6
-        Label2.Text = "Password"
+        Label2.Text = "كلمة السر:"
         ' 
         ' lblCurrentUser
         ' 
@@ -137,7 +137,7 @@ Partial Class Form1
         lblUser.Name = "lblUser"
         lblUser.Size = New Size(113, 14)
         lblUser.TabIndex = 8
-        lblUser.Text = "CURRENT USER"
+        lblUser.Text = "المستخدم الحالي"
         lblUser.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Label3
@@ -161,7 +161,7 @@ Partial Class Form1
         btnlogout.Name = "btnlogout"
         btnlogout.Size = New Size(83, 39)
         btnlogout.TabIndex = 10
-        btnlogout.Text = "LOG OUT"
+        btnlogout.Text = "تسجيل خروج"
         btnlogout.UseVisualStyleBackColor = False
         ' 
         ' btnSettings
@@ -170,7 +170,7 @@ Partial Class Form1
         btnSettings.Name = "btnSettings"
         btnSettings.Size = New Size(75, 23)
         btnSettings.TabIndex = 13
-        btnSettings.Text = "Settings"
+        btnSettings.Text = "الاعدادت"
         btnSettings.UseVisualStyleBackColor = True
         ' 
         ' NotifyIcon1

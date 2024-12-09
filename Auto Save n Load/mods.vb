@@ -9,7 +9,7 @@ Module mods
         If File.Exists(sourcePath) Then
             File.Copy(sourcePath, destinationPath, True)
         Else
-            Throw New FileNotFoundException("Source file does not existسسسس: " + sourcePath)
+            Throw New FileNotFoundException("ملف المصدر غير موجود: " + sourcePath)
         End If
     End Sub
     Function loadList(ByVal xmlName As String, ByVal Descendant As String, ByVal element As String) As List(Of String)

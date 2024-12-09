@@ -38,7 +38,7 @@ Partial Class register
         btnCancel.Name = "btnCancel"
         btnCancel.Size = New Size(75, 23)
         btnCancel.TabIndex = 15
-        btnCancel.Text = "Cancel"
+        btnCancel.Text = "إلغاء"
         btnCancel.UseVisualStyleBackColor = True
         ' 
         ' btnConfirm
@@ -47,7 +47,7 @@ Partial Class register
         btnConfirm.Name = "btnConfirm"
         btnConfirm.Size = New Size(75, 23)
         btnConfirm.TabIndex = 14
-        btnConfirm.Text = "Confirm"
+        btnConfirm.Text = "تأكيد"
         btnConfirm.UseVisualStyleBackColor = True
         ' 
         ' Label3
@@ -55,27 +55,27 @@ Partial Class register
         Label3.AutoSize = True
         Label3.Location = New Point(20, 114)
         Label3.Name = "Label3"
-        Label3.Size = New Size(107, 15)
+        Label3.Size = New Size(83, 15)
         Label3.TabIndex = 13
-        Label3.Text = "Confirm Password:"
+        Label3.Text = "تأكيد كلمة السر:"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
         Label2.Location = New Point(20, 69)
         Label2.Name = "Label2"
-        Label2.Size = New Size(60, 15)
+        Label2.Size = New Size(57, 15)
         Label2.TabIndex = 12
-        Label2.Text = "Password:"
+        Label2.Text = "كلمة السر:"
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Location = New Point(20, 27)
         Label1.Name = "Label1"
-        Label1.Size = New Size(47, 15)
+        Label1.Size = New Size(81, 15)
         Label1.TabIndex = 11
-        Label1.Text = "User ID:"
+        Label1.Text = "أسم المستخدم:"
         ' 
         ' txtpass2
         ' 

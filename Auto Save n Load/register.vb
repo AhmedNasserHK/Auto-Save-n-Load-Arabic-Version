@@ -3,17 +3,17 @@
 Public Class register
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
         If txtuser.Text = "" Or txtpass.Text = "" Or txtpass2.Text = "" Then
-            MessageBox.Show("All fields are required", "System Information")
+            MessageBox.Show("جميع الحقول مطلوبة", "معلومات النظام")
             Exit Sub
         End If
 
         If 6 > txtpass.Text.Length Then
-            MessageBox.Show("Password length must be greater than 6 characters", "System Information")
+            MessageBox.Show("يجب أن يكون طول كلمة المرور أكبر من 6 أحرف", "معلومات النظام")
             Exit Sub
         End If
 
         If txtpass.Text <> txtpass2.Text Then
-            MessageBox.Show("Password did not match", "System Information")
+            MessageBox.Show("كلمة المرور غير متطابقة", "معلومات النظام")
             Exit Sub
         End If
 
@@ -27,7 +27,7 @@ Public Class register
 
         Dim existingUser As XmlElement = doc.SelectSingleNode("//users/user/username[text() = '" & username & "']")
         If existingUser IsNot Nothing Then
-            MessageBox.Show("User '" & username & "' already exists.", "System Information")
+            MessageBox.Show("المستخدم '" & username & "' موجود بالفعل.", "معلومات النظام")
             Exit Sub
         End If
 
@@ -46,7 +46,7 @@ Public Class register
         doc.DocumentElement.AppendChild(newUserElement)
 
         doc.Save(Form1.userXML)
-        MessageBox.Show("User added successfully!", "System Information")
+        MessageBox.Show("تمت إضافة المستخدم بنجاح!", "معلومات النظام")
         Me.Close()
     End Sub
 
